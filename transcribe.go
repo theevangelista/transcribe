@@ -6,8 +6,13 @@ import (
 	"unicode/utf8"
 
 	"github.com/gin-gonic/gin"
+	"github.com/joaoevangelista/transcribe/consul"
 	"github.com/joaoevangelista/transcribe/parser"
 )
+
+func init() {
+	consul.Register()
+}
 
 func main() {
 	r := gin.Default()
